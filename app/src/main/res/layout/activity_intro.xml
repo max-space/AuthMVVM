@@ -1,48 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.intro.IntroActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/walkthroughVp"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/signupBtn" />
+        android:layout_height="match_parent"
+        tools:context=".ui.intro.IntroActivity">
 
-    <Button
-        android:id="@+id/signupBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Зарегистрироваться"
-        app:layout_constraintBottom_toTopOf="@+id/infoLl"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp" />
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/walkthroughVp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/signupBtn"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/infoLl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="64dp">
-
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Уже являетесь членом сообщества? " />
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="Зарегистрироваться"
+            app:layout_constraintBottom_toTopOf="@+id/infoLl" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/infoLl"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Войти"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:layout_marginBottom="64dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Уже являетесь членом сообщества? " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Войти"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
