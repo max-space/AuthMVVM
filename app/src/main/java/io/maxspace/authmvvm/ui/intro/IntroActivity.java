@@ -21,5 +21,7 @@ public class IntroActivity extends AppCompatActivity {
 
         mIntroAdapter = new IntroAdapter(getSupportFragmentManager(), 0);
         mBinding.walkthroughVp.setAdapter(mIntroAdapter);
+
+        mBinding.signupBtn.setOnClickListener(v -> SignupActivity.start(mActivity));
     }
 }
